@@ -1,61 +1,69 @@
+import { ImageContainer } from "@/components/common/ImageContainer";
+import { Facebook } from "@/components/icons/facebook";
 import { USER_ROUTES } from "@/constants/constants";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Menu as MenuIcon, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import {
+  MailIcon,
+  Menu as MenuIcon,
+  PhoneCall,
+  SearchIcon,
+  X,
+} from "lucide-react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const navItems = [
-  { name: "INTRODUCTION", href: "/" },
-  { name: "TEACHING PHILOSOPHY", href: USER_ROUTES.PHILOSOPHY },
-  { name: "COVER LETTER", href: USER_ROUTES.COVER_LETTER },
-  { name: "REFERENCE LETTER", href: USER_ROUTES.REFERENCE_LETTER },
-  { name: "RESUME", href: USER_ROUTES.RESUME },
-  { name: "CERTIFICATE", href: USER_ROUTES.CERTIFICATE },
-  { name: "PROJECTS", href: USER_ROUTES.PROJECTS },
+  { name: "TRANG CHỦ", href: "/" },
+  { name: "KHÓA HỌC", href: USER_ROUTES.COVER_LETTER },
+  { name: "GIỚI THIỆU", href: USER_ROUTES.RESUME },
+  { name: "TIN TỨC", href: USER_ROUTES.REFERENCE_LETTER },
+  { name: "LIÊN HỆ", href: USER_ROUTES.CERTIFICATE },
 ];
-
-export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      if (currentY > lastScrollY && currentY > 50) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      setLastScrollY(currentY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-  const { pathname } = useLocation();
+const ContactBar = () => {
   return (
-    <header
-      className={` fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 shadow ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className=" md:px-20 px-4  py-4 flex items-center justify-between w-full">
+    <div className="flex justify-end gap-5 text-sm py-1">
+      <div className="inline-flex font-bold text-gray-700 items-center gap-2 ">
+        <PhoneCall className="text-primary" size={16} />
+        <span>0925 821 477</span>
+      </div>
+      <div className="inline-flex font-bold text-gray-700 items-center gap-2">
+        <MailIcon className="text-primary" size={16} />
+        <span>dubanteo2003@gmail.com</span>
+      </div>
+      <div className="inline-flex font-bold text-gray-700 items-center gap-2">
+        <Facebook className="text-primary" />
+        <span>Rainbow English Center </span>
+      </div>
+    </div>
+  );
+};
+export const Header = () => {
+  const { pathname } = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <header className={"w-full z-50  transition-transform duration-300 "}>
+      <div className=" bg-primary h-[4px] -mx-50 "></div>
+      <ContactBar />
+      <div className="  px-4  py-4 flex  justify-between w-full items-end ">
+        <ImageContainer src="/logo.jpg" className="w-[50px]" />
         <div className="flex gap-4 items-center">
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+          <nav className="hidden md:flex gap-8 font-bold    text-gray-700 text-sm">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "hover:text-primary-foreground transition-colors duration-200 ",
-                  pathname.substring(1).startsWith(item.href) &&
-                    "text-primary-foreground",
+                  "hover:text-primary transition-colors duration-200 ",
+                  pathname.substring(1).startsWith(item.href) && "text-primary",
                 )}
               >
                 {item.name}
               </a>
             ))}
+          </nav>
+          <nav>
+            <SearchIcon className="hover:text-primary" />
           </nav>
         </div>
         <button
