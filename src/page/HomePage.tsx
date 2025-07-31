@@ -1,12 +1,13 @@
 import { useEffect } from "react";
+import { CarouselSection } from "./home/CarouselSection";
 
 export const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="px-2 ">
-      <h2 className="">Minh bu</h2>
+    <div className="px-2 w-full ">
+      <CarouselSection />
     </div>
   );
 };
