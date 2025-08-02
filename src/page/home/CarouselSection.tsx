@@ -4,6 +4,7 @@ import type { FC } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider, { type Settings } from "react-slick";
+import { Container } from "@/components/ui/container";
 interface CarouselSectionProps {
   className?: string;
 }
@@ -19,16 +20,18 @@ export const CarouselSection: FC<CarouselSectionProps> = ({ className }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const images = ["/home/carousel1.jpg", "/home/carousel2.jpg"];
   return (
-    <div className={cn(className, "flex justify-center bg-foreground -mx-88 ")}>
-      <Slider className="w-[800px] h-[500px] overflow-hidden" {...settings}>
-        <div>
-          <img src="/home/carousel1.jpg" className="h-[500px] w-full object-fill" />
-        </div>
-        <div>
-          <img src="/home/carousel2.jpg" className=" h-[500px] w-full object-fill" />
-        </div>
-      </Slider>
+    <div className={cn(className, "w-full  bg-foreground max-h-[500px]")}>
+      <Container>
+        <Slider {...settings}>
+          {images.map((src) => (
+            <div>
+              <img src={src} className="h-[500px] object-fill w-full" />
+            </div>
+          ))}
+        </Slider>
+      </Container>
     </div>
   );
 };

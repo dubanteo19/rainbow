@@ -46,7 +46,7 @@
   --fg: oklch(0.22 0.01 270); /* dark gray text */
   --primary: oklch(0.9 0.18 70); /* lemon yellow */
   --primary-foreground: oklch(0.2 0.02 270); /* text on yellow */
-  --secondary: oklch(0.75 0.15 280); /* violet/purple from logo */
+  --secondary: oklch(0.3338 0.1406 300.46);
   --secondary-foreground: oklch(0.1 0.01 270);
   --muted: oklch(0.95 0.02 240); /* light gray for cards, etc */
   --muted-foreground: oklch(0.3 0.01 260);
