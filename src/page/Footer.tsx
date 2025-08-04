@@ -1,42 +1,79 @@
-import { Facebook } from "@/components/icons/facebook";
-import { Insta } from "@/components/icons/insta";
-import { TikTokIcon } from "@/components/icons/tiktok";
-import { Button } from "@/components/ui/button";
-import type { ContactItem } from "@/type/contact-item";
+import FacebookPagePlugin from "@/components/common/facebookPage";
+import { ImageContainer } from "@/components/common/ImageContainer";
+import { Container } from "@/components/ui/container";
+import { HomeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
+interface FooterItem {
+  title: string;
+  nodes: ReactNode[];
+}
 export const Footer = () => {
-  const contacts: ContactItem[] = [
-    { id: 1, href: "https://www.tiktok.com/@surihaiyen", icon: <TikTokIcon /> },
+  const footerItems: FooterItem[] = [
     {
-      id: 2,
-      href: "https://www.facebook.com/suri.hai.yen.2025",
-      icon: <Facebook />,
+      title: "Social Media",
+      nodes: [
+        <FacebookPagePlugin pageUrl="https://www.facebook.com/rainbowenglishcentre.trungtamngoainguphuochai" />,
+      ],
     },
-    { id: 3, href: "https://www.instagram.com/surihaiyen", icon: <Insta /> },
+    {
+      title: "Address",
+      nodes: [
+        <div className="flex items-center  gap-2 text-sm ">
+          <div className="text-primary ">
+            <HomeIcon size={20} />
+          </div>
+          17 ô 2/52 ấp Hải Tân, xã Phước Hải, TP. HCM
+        </div>,
+        <div className="flex item-center gap-2 text-sm ">
+          <div className="text-primary">
+            <PhoneIcon size={20} />
+          </div>
+          0888 77 1986 (Ms. Sửu)
+        </div>,
+        <div className="flex item-center gap-2 text-sm ">
+          <div className="text-primary">
+            <MailIcon size={20} />
+          </div>
+          surihuynh012@gmail.com
+        </div>,
+      ],
+    },
+    {
+      title: "Useful links",
+      nodes: [
+        <Link to="/about">Giới thiệu</Link>,
+        <Link to="/contact">Liên hệ</Link>,
+        <Link to="/course">Khóa học</Link>,
+        <Link to="/">Tin tức</Link>,
+      ],
+    },
+
+    {
+      title: "Authentication",
+      nodes: [<ImageContainer src="/ssl.webp" className="w-[120px]" />],
+    },
   ];
   return (
-    <div className="bg-primary  text-foreground md:-mx-4 px-8 mt-4">
-      <div className="border-t-white border-t-1 ">
-        <h1 className="text-center font-semibold text-4xl md:text-6xl py-8">
-          THI SUU LEE
-        </h1>
-        <div className="text-center">
-          <h3>266.961.4852</h3>
-          <h3>surihuynh012@gmail.com</h3>
+    <Container>
+      <div className=" md:-mx-4 px-8 mt-4">
+        <div className="grid md:grid-cols-4 gap-2">
+          {footerItems.map((item) => (
+            <div className="">
+              <p className="text-xl ">{item.title}</p>
+              <div className="w-[50px] h-[2px] bg-primary mt-4"></div>
+              <div className="mt-6 flex flex-col gap-2">
+                {item.nodes.map((node) => node)}
+              </div>
+            </div>
+          ))}
         </div>
+        <div className="h-[2px] w-full bg-gray-400 my-4 "></div>
+        <p className="text-xs mt-2 py-2">
+          Copyright (c) 2025 Suri. All Rights Reserved.
+        </p>
       </div>
-      <div className="flex justify-center gap-2 mt-6 ">
-        {contacts.map((c) => (
-          <a href={c.href} key={c.id} target="_blank">
-            <Button className="text-black" variant="ghost">
-              {c.icon}
-            </Button>
-          </a>
-        ))}
-      </div>
-      <p className="text-xs mt-2 py-2">
-        Copyright (c) 2025 Suri. All Rights Reserved.
-      </p>
-    </div>
+    </Container>
   );
 };
