@@ -1,30 +1,54 @@
 import { ImageContainer } from "@/components/common/ImageContainer";
+import { Container } from "@/components/ui/container";
+import { feedbacks } from "@/data/feedbacks";
+import type { Feedback } from "@/type/feedback";
+import { QuoteIcon } from "lucide-react";
 import type { FC } from "react";
+import Slider, { type Settings } from "react-slick";
 
-interface Feedback {
-  id: string;
-  content: string;
-  authorName: string;
-  authorImage: string;
-}
 const FeedbackItem: FC<Feedback> = ({ content, authorImage, authorName }) => {
   return (
-    <div className="flex flex-col gap-5">
-      <div className="bg-gray-500 p-4">
-        <p className="text-sm text-gray-800">{content}</p>
+    <div className="flex flex-col gap-4">
+      <div className="bg-gray-100 px-8 py-8 rounded relative">
+        <QuoteIcon className="text-primary absolute right-2 top-2 " />
+        <p className="text-sm text-gray-500 italic ">{content}</p>
       </div>
-      <div className="flex flex-col items-center gap-20">
-        <ImageContainer src={authorImage} />
-        <p className="uppercase">{authorName}</p>
+      <div className="flex  gap-2 md:gap-6 items-center ">
+        <ImageContainer
+          src={authorImage}
+          className="w-15 md:w-20 rounded-full "
+        />
+        <div>
+          <p className="uppercase text-sm text-gray-500">{authorName}</p>
+          <p className="text-xs text-gray-500 mt-2">Parents</p>
+        </div>
       </div>
     </div>
   );
 };
 export const FeedbacksSection = () => {
+  const settings: Settings = {
+    arrows: true,
+    infinite: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div>
-      <h2 className="text-center">What Our Customers Say About Us</h2>
-
+      <Container>
+        <h3 className="text-center">What Our Customers Say About Us</h3>
+        <div className="slider-container mt-5">
+          <Slider {...settings}>
+            {feedbacks.map((feedback) => (
+              <FeedbackItem key={feedback.id} {...feedback} />
+            ))}
+          </Slider>
+        </div>
+      </Container>
     </div>
   );
 };

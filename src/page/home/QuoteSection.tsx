@@ -1,14 +1,38 @@
-export const QuoteSection = () => {
+import { Container } from "@/components/ui/container";
+import type { FC } from "react";
+
+interface QuoteSectionProps {
+  quote: string;
+  subquote?: string;
+  author?: string;
+}
+export const QuoteSection: FC<QuoteSectionProps> = ({
+  quote,
+  subquote,
+  author,
+}) => {
   return (
-    <div className="w-full bg-secondary h-[100px] flex items-center justify-center">
-      <blockquote className="text-center text-white text-xl">
-        “Education is the most powerful weapon which you can use to change the
-        world.”
-        <br />
-        <cite className="block mt-2 text-sm text-white/80">
-          – Nelson Mandela
-        </cite>
-      </blockquote>
+    <div className="w-full bg-secondary">
+      <Container>
+        <div className=" flex items-center justify-center py-8">
+          <blockquote className="text-center text-white text-base md:text-xl ">
+            {quote}
+            {subquote && (
+              <blockquote className="text-xs md:text-sm text-gray-100 italic mt-4 md:mt-2">
+                {subquote}
+              </blockquote>
+            )}
+            {author && (
+              <div>
+                <br />
+                <cite className="block mt-2 text-sm text-white/80">
+                  – {author}
+                </cite>
+              </div>
+            )}
+          </blockquote>
+        </div>
+      </Container>
     </div>
   );
 };

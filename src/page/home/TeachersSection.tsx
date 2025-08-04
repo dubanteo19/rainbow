@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import type { FC } from "react";
 import Slider, { type Settings } from "react-slick";
+import { QuoteSection } from "./QuoteSection";
 
 const TeacherCard: FC<Teacher> = ({
   id,
@@ -32,32 +33,30 @@ export const TeachersSection = () => {
     speed: 1000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    slidesPerRow:1,
     arrows: false,
     autoplay: true,
-    slidesToShow: 5,
+    slidesToShow: 5, //default
     slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 3 } }, //tablet
+      { breakpoint: 768, settings: { slidesToShow: 1 } }, //mobile
+    ],
   };
   return (
-    <div className="py-10 w-full">
+    <div className="py-10 w-full px-4 md:px-0">
       <div className="text-center">
         <h4 className=" font-bold">Our Teachers</h4>
-        <p className="text-sm text-gray-500 py-6">
+        <p className="text-sm text-gray-500 py-2 md:py-6">
           Learning opens the door to endless opportunities.
         </p>
       </div>
       <div className="slider-container py-5">
-        <Slider {...settings} >
+        <Slider {...settings}>
           {teachers.map((teacher) => (
             <TeacherCard key={teacher.id} {...teacher} />
           ))}
         </Slider>
       </div>
-      <blockquote className="text-center text-sm text-gray-500">
-        "Let failure guide you – Let questions shape you – Let every soul you
-        meet inspire you" – Cô tin rằng thất bại là người dẫn đường, câu hỏi là
-        động lực để trưởng thành, và mỗi con người đều có thể là nguồn cảm hứng.
-      </blockquote>
     </div>
   );
 };

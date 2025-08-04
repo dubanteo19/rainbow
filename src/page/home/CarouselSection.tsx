@@ -27,7 +27,10 @@ export const CarouselSection: FC<CarouselSectionProps> = ({ className }) => {
         <Slider {...settings}>
           {images.map((src) => (
             <div>
-              <img src={src} className="h-[500px] object-fill w-full" />
+              <img
+                src={src}
+                className="h-[200px] md:h-[500px] object-fill w-full"
+              />
             </div>
           ))}
         </Slider>
