@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import type { FC } from "react";
 import Slider, { type Settings } from "react-slick";
-import { QuoteSection } from "./QuoteSection";
 
 const TeacherCard: FC<Teacher> = ({
   id,
@@ -16,13 +15,13 @@ const TeacherCard: FC<Teacher> = ({
 }) => {
   return (
     <div className="border shadow flex flex-col gap-2 mr-3 min-h-[310px]">
-      <div id={id} className="w-500px">
-        <ImageContainer src={image} />
+      <div id={id} className=" w-full aspect-[3/4] overflow-hidden">
+        <img src={image} className="w-full h-full object-cover object-center" />
       </div>
       <div className="text-center uppercase px-2 py-4">
-        <p>{name}</p>
-        <p className="text-sm text-gray-500">{certificate}</p>
-        <p className="text-[10px] mt-4 font-bold text-gray-500">{education}</p>
+        <p className="text-xs">{name}</p>
+        <p className="text-[11px]  mt-2 text-gray-500">{certificate}</p>
+        <p className="text-[10px] mt-2 font-bold text-gray-500">{education}</p>
       </div>
     </div>
   );

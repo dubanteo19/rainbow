@@ -71,7 +71,7 @@ export const IntroductionSection = () => {
         cho học viên một trải nghiệm học tập đẳng cấp, giúp phát triển toàn diện
         kỹ năng ngôn ngữ của bạn.
       </p>
-      <div className="grid grid-cols-2 gap-4 mt-4">
+      <div className="grid md:grid-cols-2 gap-4 mt-4">
         {educationFactors.map((item, index) => (
           <div key={index} className="flex gap-4 ">
             <div >

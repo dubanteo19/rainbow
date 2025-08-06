@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { CarouselSection } from "./home/CarouselSection";
+import { CertificatesSection } from "./home/CertificatesSection";
 import { FeedbacksSection } from "./home/FeedbacksSection";
 import { IntroductionSection } from "./home/IntroductionSection";
 import { QuoteSection } from "./home/QuoteSection";
@@ -26,6 +27,11 @@ export const HomePage = () => {
       <div className="w-full bg-gray-100">
         <Container>
           <TeachersSection />
+        </Container>
+      </div>
+      <div className="w-full ">
+        <Container>
+          <CertificatesSection />
         </Container>
       </div>
       <QuoteSection
