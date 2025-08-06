@@ -2,7 +2,14 @@ import { ImageContainer } from "@/components/common/ImageContainer";
 import Slider, { type Settings } from "react-slick";
 
 export const CertificatesSection = () => {
-  const certificates = ["/certificates/1.jpg"]
+  const certificates = [
+    "/certifications/1.jpg",
+    "/certifications/2.jpg",
+    "/certifications/3.jpg",
+    "/certifications/4.jpg",
+    "/certifications/5.jpg",
+    "/certifications/6.jpg",
+  ];
   const settings: Settings = {
     infinite: true,
     speed: 1000,
@@ -10,10 +17,10 @@ export const CertificatesSection = () => {
     cssEase: "linear",
     arrows: false,
     autoplay: true,
-    slidesToShow: 5, //default
+    slidesToShow: 4, //default
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } }, //tablet
+      { breakpoint: 1024, settings: { slidesToShow: 2 } }, //tablet
       { breakpoint: 768, settings: { slidesToShow: 1 } }, //mobile
     ],
   };
@@ -21,12 +28,19 @@ export const CertificatesSection = () => {
     <div className="">
       <div className="text-center">
         <h4 className=" font-bold">Certificates</h4>
-        <p className="text-sm text-gray-500 py-2 md:py-6">Education is the key that unlocks a world of possibilities.</p>
+        <p className="text-sm text-gray-500 py-2 md:py-6">
+          Education is the key that unlocks a world of possibilities.
+        </p>
       </div>
-      <div className="slider-container py-5">
+      <div className="slider-container ">
         <Slider {...settings}>
-          {certificates.map((certificate,index) => (
-            <ImageContainer key={index} src={certificate} />
+          {certificates.map((certificate, index) => (
+            <div key={index} className="w-full aspect-[3/2] overflow-hidden mr-4">
+              <img
+                src={certificate}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           ))}
         </Slider>
       </div>
