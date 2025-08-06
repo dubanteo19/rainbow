@@ -1,4 +1,3 @@
-import { ImageContainer } from "@/components/common/ImageContainer";
 import Slider, { type Settings } from "react-slick";
 
 export const CertificatesSection = () => {

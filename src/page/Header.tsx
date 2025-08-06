@@ -16,10 +16,10 @@ import { useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "TRANG CHỦ", href: "/" },
-  { name: "KHÓA HỌC", href: USER_ROUTES.COVER_LETTER },
-  { name: "GIỚI THIỆU", href: USER_ROUTES.RESUME },
-  { name: "TIN TỨC", href: USER_ROUTES.REFERENCE_LETTER },
-  { name: "LIÊN HỆ", href: USER_ROUTES.CERTIFICATE },
+  { name: "KHÓA HỌC", href: USER_ROUTES.COURSE },
+  { name: "GIỚI THIỆU", href: USER_ROUTES.ABOUT },
+  { name: "TIN TỨC", href: USER_ROUTES.CONTACT },
+  { name: "LIÊN HỆ", href: USER_ROUTES.CONTACT },
 ];
 const ContactBar = () => {
   return (

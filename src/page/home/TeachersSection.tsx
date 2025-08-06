@@ -1,10 +1,9 @@
-import { ImageContainer } from "@/components/common/ImageContainer";
 import { teachers } from "@/data/teachers";
 import type { Teacher } from "@/type/teacher";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import type { FC } from "react";
 import Slider, { type Settings } from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const TeacherCard: FC<Teacher> = ({
   id,
