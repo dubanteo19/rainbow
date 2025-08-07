@@ -20,7 +20,11 @@ export const CarouselSection: FC<CarouselSectionProps> = ({ className }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  const images = ["/home/carousel1.jpg", "/home/carousel2.jpg"];
+  const images = ["/home/carousel1.jpg",
+    "/home/carousel2.jpg",
+    "/home/carousel3.jpg",
+    "/home/carousel4.jpg",
+    "/home/carousel5.jpg"];
   return (
     <div className={cn(className, "w-full  bg-foreground max-h-[500px]")}>
       <Container>

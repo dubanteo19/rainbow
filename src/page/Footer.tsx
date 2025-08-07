@@ -1,6 +1,7 @@
 import FacebookPagePlugin from "@/components/common/facebookPage";
 import { ImageContainer } from "@/components/common/ImageContainer";
 import { Container } from "@/components/ui/container";
+import { ADDRESS, EMAIL, FANPAGE_URL, PHONE } from "@/constants/constants";
 import { HomeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
@@ -13,9 +14,7 @@ export const Footer = () => {
   const footerItems: FooterItem[] = [
     {
       title: "Social Media",
-      nodes: [
-        <FacebookPagePlugin pageUrl="https://www.facebook.com/rainbowenglishcentre.trungtamngoainguphuochai" />,
-      ],
+      nodes: [<FacebookPagePlugin pageUrl={FANPAGE_URL} />],
     },
     {
       title: "Address",
@@ -24,19 +23,19 @@ export const Footer = () => {
           <div className="text-primary ">
             <HomeIcon size={20} />
           </div>
-          17 ô 2/52 ấp Hải Tân, xã Phước Hải, TP. HCM
+          {ADDRESS}
         </div>,
         <div className="flex item-center gap-2 text-sm ">
           <div className="text-primary">
             <PhoneIcon size={20} />
           </div>
-          0888 77 1986 (Ms. Sửu)
+          {PHONE} (Ms. Sửu)
         </div>,
         <div className="flex item-center gap-2 text-sm ">
           <div className="text-primary">
             <MailIcon size={20} />
           </div>
-          surihuynh012@gmail.com
+          {EMAIL}
         </div>,
       ],
     },
@@ -59,12 +58,12 @@ export const Footer = () => {
     <Container>
       <div className=" md:-mx-4 px-8 mt-4">
         <div className="grid md:grid-cols-4 gap-2">
-          {footerItems.map((item) => (
-            <div className="">
+          {footerItems.map((item, index) => (
+            <div key={index}>
               <p className="text-xl ">{item.title}</p>
               <div className="w-[50px] h-[2px] bg-primary mt-4"></div>
               <div className="mt-6 flex flex-col gap-2">
-                {item.nodes.map((node) => node)}
+                {item.nodes.map((node,index) => <div key={index}>{node}</div>)}
               </div>
             </div>
           ))}

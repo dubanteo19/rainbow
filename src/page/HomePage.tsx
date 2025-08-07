@@ -5,7 +5,6 @@ import { FeedbacksSection } from "./home/FeedbacksSection";
 import { IntroductionSection } from "./home/IntroductionSection";
 import { QuoteSection } from "./home/QuoteSection";
 import { TeachersSection } from "./home/TeachersSection";
-import { ActionGroup } from "./home/ActionGroup";
 
 export const HomePage = () => {
   /* useEffect(() => {
@@ -13,7 +12,7 @@ export const HomePage = () => {
     }, []); */
 
   return (
-    <div className="w-full flex flex-col gap-5 relative">
+    <div className="w-full flex flex-col gap-5 ">
       <CarouselSection />
       <Container>
         <IntroductionSection />
@@ -41,7 +40,6 @@ export const HomePage = () => {
         subquote="Cô tin rằng thất bại là người dẫn đường, câu hỏi là
         động lực để trưởng thành, và mỗi con người đều có thể là nguồn cảm hứng."
       />
-      <ActionGroup />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { ImageContainer } from "@/components/common/ImageContainer";
 import { Facebook } from "@/components/icons/facebook";
 import { Container } from "@/components/ui/container";
-import { USER_ROUTES } from "@/constants/constants";
+import { EMAIL, PHONE, USER_ROUTES } from "@/constants/constants";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
@@ -26,11 +26,11 @@ const ContactBar = () => {
     <div className=" justify-end gap-5 text-sm py-1 hidden md:flex">
       <div className="inline-flex font-bold text-gray-700 items-center gap-2 ">
         <PhoneCall className="text-primary" size={16} />
-        <span>0925 821 477</span>
+        <span>{PHONE}</span>
       </div>
       <div className="inline-flex font-bold text-gray-700 items-center gap-2">
         <MailIcon className="text-primary" size={16} />
-        <span>dubanteo2003@gmail.com</span>
+        <span>{EMAIL}</span>
       </div>
       <div className="inline-flex font-bold text-gray-700 items-center gap-2">
         <Facebook className="text-primary" />
