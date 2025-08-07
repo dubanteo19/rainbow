@@ -1,4 +1,4 @@
-import { ImageContainer } from "@/components/common/ImageContainer";
+import { CTASection } from "@/components/common/CTASection";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/container";
 import { ADDRESS, EMAIL, PHONE, USER_ROUTES } from "@/constants/constants";
@@ -6,7 +6,6 @@ import type { ContactItem } from "@/type/contact-item";
 import { LocateIcon, MailIcon, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CentreMap } from "./CentreMap";
-import { CTASection } from "@/components/common/CTASection";
 
 export const ContactPage = () => {
   const contacts: ContactItem[] = [

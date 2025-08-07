@@ -38,7 +38,23 @@ export const teachers: Teacher[] = [
   {
     id: "t6",
     image: "/teachers/suu.jpg",
-    name: "Lê Thị Sửu ",
+    name: "Lê Thị Sửu",
+    certificate: "English teacher",
+    education: "Bachelor of English Language",
+  },
+
+  {
+    id: "t7",
+    image: "/teachers/quynh.jpg",
+    name: "Nguyễn Lê Xuân Quỳnh",
+    certificate: "English teacher",
+    education: "Bachelor of English Language",
+  },
+
+  {
+    id: "t8",
+    image: "/teachers/thuong.jpg",
+    name: "Nguyễn Đỗ Hoài Thương",
     certificate: "English teacher",
     education: "Bachelor of English Language",
   },

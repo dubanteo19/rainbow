@@ -9,9 +9,11 @@ export const CTASection = () => {
           Cần hỗ trợ? Chúng tôi luôn sẵn sàng lắng nghe, đồng hành cùng bạn trên
           từng bước đường!
         </p>
-        <Button className=" rounded text-white bg-primary/70 px-6">
-          Gọi tư vấn
-        </Button>
+        <a href="https://zalo.me/0888771986" target="_blank">
+          <Button className=" rounded text-white bg-primary/70 px-6">
+            Gọi tư vấn
+          </Button>
+        </a>
       </Container>
     </div>
   );

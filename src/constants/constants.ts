@@ -1,6 +1,7 @@
 export const USER_ROUTES = Object.freeze({
   HOME: "/",
   CONTACT: "/contact",
+  MEDIA: "/media",
   ABOUT: "/about",
   COURSE: "/course",
 });
