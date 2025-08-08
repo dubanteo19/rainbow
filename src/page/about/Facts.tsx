@@ -13,7 +13,7 @@ export const Facts = () => {
     { name: "year of experience", count: 11 },
   ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 divide-x-2 divide-white">
+    <div className="grid grid-cols-2 md:grid-cols-4 divide-y-2 divide-x-2 divide-white">
       {facts.map((fact, index) => (
         <motion.div
           key={index}

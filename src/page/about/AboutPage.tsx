@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Facts } from "./Facts";
 import { Skills } from "./Skills";
 import { TeacherQuotes } from "./TeacherQuotes";
+import { motion } from "motion/react";
 
 export const AboutPage = () => {
   return (
@@ -58,7 +59,13 @@ export const AboutPage = () => {
                 trị tốt nhất cho từng học viên.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4  ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+              viewport={{once:true}}
+              className="flex flex-wrap gap-4  "
+            >
               <ImageContainer className=" aspect-[2/1]" src="/about/pic1.jpg" />
               <div className="grid grid-cols-2 gap-2">
                 <ImageContainer
@@ -70,19 +77,19 @@ export const AboutPage = () => {
                   src="/about/pic3.jpg"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <EducationFactors />
       </Container>
-      <div className="w-full bg-secondary mt-4">
+      <div className="w-full bg-secondary mt-4 pb-6">
         <Container>
           <Facts />
           <Skills />
         </Container>
       </div>
 
-      <TeacherQuotes />
+     <TeacherQuotes />
       <CTASection />
     </div>
   );

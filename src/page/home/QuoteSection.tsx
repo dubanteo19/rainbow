@@ -1,16 +1,8 @@
 import { Container } from "@/components/ui/container";
+import type { Quote } from "@/type/quote";
 import type { FC } from "react";
 
-interface QuoteSectionProps {
-  quote: string;
-  subquote?: string;
-  author?: string;
-}
-export const QuoteSection: FC<QuoteSectionProps> = ({
-  quote,
-  subquote,
-  author,
-}) => {
+export const QuoteSection: FC<Quote> = ({ quote, subquote, author }) => {
   return (
     <div className="w-full bg-secondary">
       <Container>
