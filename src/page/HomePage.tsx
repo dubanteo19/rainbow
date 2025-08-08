@@ -37,7 +37,7 @@ export const HomePage = () => {
       <QuoteSection
         quote="Let failure guide you – Let questions shape you – Let every soul you
         meet inspire you"
-        subquote="Cô tin rằng thất bại là người dẫn đường, câu hỏi là
+        subquote="Hãy để thất bại là người dẫn đường, câu hỏi là
         động lực để trưởng thành, và mỗi con người đều có thể là nguồn cảm hứng."
       />
     </div>
