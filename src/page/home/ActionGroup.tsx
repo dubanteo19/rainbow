@@ -1,5 +1,6 @@
 import { ZaloIcon } from "@/components/icons/zalo";
 import { ArrowUp, Phone } from "lucide-react";
+import { motion } from "motion/react";
 
 export const ActionGroup = () => {
   const scrollToTop = () => {
@@ -7,14 +8,16 @@ export const ActionGroup = () => {
   };
   return (
     <div className="fixed bottom-8 right-6 flex flex-col gap-4">
-      <div
+      <motion.div
+        animate={{ rotate: [0, -90, 90, -90, 90, 0] }}
+        transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 1 }}
         className="text-primary flex justify-center transition-all cursor-pointer
         items-center p-3 border-2 rounded-full border-primary hover:rotate-150"
       >
         <a href="tel:+84888771986" target="_blank">
           <Phone size={30} />
         </a>
-      </div>
+      </motion.div>
       <div
         className="text-primary flex justify-center transition-all cursor-pointer
         items-center p-2 border-2 rounded-full border-primary hover:scale-110"
