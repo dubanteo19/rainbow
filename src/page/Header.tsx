@@ -21,9 +21,9 @@ const navItems = [
     name: "KHÓA HỌC",
     href: USER_ROUTES.COURSE,
     children: [
-      { name: "Chương trình Thiếu nhi", href: USER_ROUTES.COURSE },
-      { name: "Chương trình Thiếu niên", href: USER_ROUTES.COURSE },
-      { name: "Lớp kèm/ Học online", href: USER_ROUTES.COURSE },
+      { name: "Chương trình Thiếu nhi", href: USER_ROUTES.COURSE_YOUNG },
+      { name: "Chương trình Thiếu niên", href: USER_ROUTES.COURSE_TEEN },
+      { name: "Lớp kèm/ Học online", href: USER_ROUTES.COURSE_PRIVATE },
     ],
   },
   { name: "GIỚI THIỆU", href: USER_ROUTES.ABOUT },

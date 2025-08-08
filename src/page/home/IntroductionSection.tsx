@@ -1,6 +1,5 @@
 import { EducationFactors } from "@/components/common/EducationFactors";
 import { ImageContainer } from "@/components/common/ImageContainer";
-import { educationFactors } from "@/data/education-factor";
 
 export const IntroductionSection = () => {
   return (

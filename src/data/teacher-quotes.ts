@@ -2,24 +2,24 @@ import type { Quote } from "@/type/quote";
 
 export const teacherQuotes: Quote[] = [
   {
-    quote: "Every lesson is a seed planted for a brighter tomorrow.",
+    quote:
+      "One language sets you in a corridor for life. Two languages open every door along the way",
     author: "Nguyễn Thị Minh Hậu",
   },
   {
-    quote: "Learning opens the door, but passion walks you through it.",
+    quote: "Dream in English , live your dream",
     author: "Nguyễn Ngọc Kha",
   },
   {
-    quote: "Words can teach, but encouragement makes them blossom.",
+    quote: "You are stronger than you think",
     author: "Dương Thị Mỹ Duyên",
   },
   {
-    quote: "A mind inspired is a life transformed.",
+    quote: "No pain, no gain",
     author: "Lê Thị Băng Châu",
   },
   {
-    quote:
-      "Education is not just knowledge — it is the courage to dream bigger.",
+    quote: "Your future is created by what you do today.",
     author: "Lương Kim Phụng",
   },
   {
@@ -27,11 +27,12 @@ export const teacherQuotes: Quote[] = [
     author: "Lê Thị Sửu",
   },
   {
-    quote: "Every student holds a story waiting to change the world.",
+    quote:
+      "English is the bridge that connects your dreams to reality in a global world.",
     author: "Nguyễn Lê Xuân Quỳnh",
   },
   {
-    quote: "Teaching is the art of turning curiosity into confidence.",
+    quote: "Studying is not about time. It's about effort",
     author: "Nguyễn Đỗ Hoài Thương",
   },
 ];

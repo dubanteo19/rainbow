@@ -3,6 +3,9 @@ import { UserLayout } from "@/layout/UserLayout";
 import { AboutPage } from "@/page/about/AboutPage";
 import { ContactPage } from "@/page/contact/ContactPage";
 import { CoursePage } from "@/page/course/CoursePage";
+import { PrivateCoursePage } from "@/page/course/PrivateCoursePage";
+import { TeenCoursePage } from "@/page/course/TeenCoursePage";
+import { YoungCoursePage } from "@/page/course/YoungCoursePage";
 import { HomePage } from "@/page/HomePage";
 import { MediaPage } from "@/page/media/MediaPage";
 import { type RouteObject } from "react-router-dom";
@@ -16,5 +19,8 @@ export const userRoutes: RouteObject = {
     { path: USER_ROUTES.CONTACT, element: <ContactPage /> },
     { path: USER_ROUTES.MEDIA, element: <MediaPage /> },
     { path: USER_ROUTES.COURSE, element: <CoursePage /> },
+    { path: USER_ROUTES.COURSE_YOUNG, element: <YoungCoursePage /> },
+    { path: USER_ROUTES.COURSE_TEEN, element: <TeenCoursePage /> },
+    { path: USER_ROUTES.COURSE_PRIVATE, element: <PrivateCoursePage /> },
   ],
 };
