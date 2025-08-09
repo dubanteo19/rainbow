@@ -1,19 +1,20 @@
 import { CTASection } from "@/components/common/CTASection";
+import { ImageContainer } from "@/components/common/ImageContainer";
 import { ProgramSection } from "@/components/common/Program";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/container";
 import { programTitles, USER_ROUTES } from "@/constants/constants";
 import { programs } from "@/data/programs";
-import { Link } from "react-router-dom";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Link } from "react-router-dom";
 
 export const YoungCoursePage = () => {
-  const program = programs.find((program) => (program.id = "young-learners"));
+  const program = programs.find((program) => program.id == "young-learners");
   return (
     <div>
       <Container className="mb-6">
         <div
-          className="bg-[url('/program/young/young3.jpg')] min-h-[400px] w-full  bg-cover bg-bottom
+          className="bg-[url('/program/young/young4.avif')] min-h-[400px] w-full  bg-cover bg-bottom
           flex flex-col justify-end"
         >
           <div className="inline-flex  flex-col">
@@ -35,10 +36,10 @@ export const YoungCoursePage = () => {
           columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
         >
           <Masonry>
-            <img src="/program/young/young1.jpg" loading="lazy" />
-            <img src="/program/young/young2.jpg" loading="lazy" />
-            <img src="/program/young/young3.jpg" loading="lazy" />
-            <img src="/program/young/young4.jpg" loading="lazy" />
+            <ImageContainer src="/program/young/young1.jpg" />
+            <ImageContainer src="/program/young/young2.jpg" />
+            <ImageContainer src="/program/young/young3.jpg" />
+            <ImageContainer src="/program/young/young4.jpg" />
           </Masonry>
         </ResponsiveMasonry>
       </Container>

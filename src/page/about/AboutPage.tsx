@@ -15,7 +15,7 @@ export const AboutPage = () => {
     <div>
       <Container>
         <div
-          className="bg-[url('/home/carousel2.jpg')] min-h-[400px] w-full  bg-cover bg-center
+          className="bg-[url('/home/carousel2.avif')] min-h-[400px] w-full  bg-cover bg-center
           flex flex-col justify-end"
         >
           <div className="inline-flex  flex-col">
@@ -63,7 +63,7 @@ export const AboutPage = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
-              viewport={{once:true}}
+              viewport={{ once: true }}
               className="flex flex-wrap gap-4  "
             >
               <ImageContainer className=" aspect-[2/1]" src="/about/pic1.jpg" />
@@ -89,7 +89,7 @@ export const AboutPage = () => {
         </Container>
       </div>
 
-     <TeacherQuotes />
+      <TeacherQuotes />
       <CTASection />
     </div>
   );

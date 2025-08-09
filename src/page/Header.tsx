@@ -13,7 +13,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "TRANG CHỦ", href: "/" },
@@ -57,7 +57,9 @@ export const Header = () => {
       <Container>
         <ContactBar />
         <div className="    py-2 flex  justify-between w-full items-center md:items-end ">
-          <ImageContainer src="/logo.jpg" className="w-[50px]" />
+          <Link to={USER_ROUTES.HOME}>
+            <ImageContainer src="/logo.jpg" className="w-[50px]" />
+          </Link>
           <div className="flex gap-4 items-center">
             <nav className="hidden md:flex gap-8 font-bold    text-gray-700 text-sm">
               {navItems.map((item) =>

@@ -1,4 +1,5 @@
 import { CTASection } from "@/components/common/CTASection";
+import { ImageContainer } from "@/components/common/ImageContainer";
 import { ProgramSection } from "@/components/common/Program";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/container";
@@ -13,7 +14,7 @@ export const PrivateCoursePage = () => {
     <div>
       <Container className="mb-6">
         <div
-          className="bg-[url('/program/private/private4.jpg')] min-h-[400px] w-full  bg-cover bg-center
+          className="bg-[url('/program/private/private4.avif')] min-h-[400px] w-full  bg-cover bg-center
           flex flex-col justify-end"
         >
           <div className="inline-flex  flex-col">
@@ -22,7 +23,7 @@ export const PrivateCoursePage = () => {
             </h2>
             <Breadcrumb
               child={
-                <Link to={USER_ROUTES.COURSE_YOUNG}>
+                <Link to={USER_ROUTES.COURSE_PRIVATE}>
                   {programTitles["private-online"]}
                 </Link>
               }
@@ -36,9 +37,9 @@ export const PrivateCoursePage = () => {
           columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
         >
           <Masonry>
-            <img src="/program/private/private1.jpg" loading="lazy" />
-            <img src="/program/private/private2.jpg" loading="lazy" />
-            <img src="/program/private/private3.jpeg" loading="lazy" />
+            <ImageContainer src="/program/private/private1.jpg" />
+            <ImageContainer src="/program/private/private2.jpg" />
+            <ImageContainer src="/program/private/private3.jpg" />
           </Masonry>
         </ResponsiveMasonry>
       </Container>

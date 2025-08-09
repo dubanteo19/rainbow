@@ -1,18 +1,11 @@
 import Slider, { type Settings } from "react-slick";
 
 export const CertificatesSection = () => {
-  const certificates = [
-    "/certifications/1.jpg",
-    "/certifications/2.jpg",
-    "/certifications/3.jpg",
-    "/certifications/4.jpg",
-    "/certifications/5.jpg",
-    "/certifications/6.jpg",
-  ];
+  const certificates = Array.from({ length: 20 }, (_, i)=>`/certifications/pic${i+1}.avif`);
   const settings: Settings = {
     infinite: true,
     speed: 1000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     arrows: false,
     autoplay: true,
@@ -34,7 +27,10 @@ export const CertificatesSection = () => {
       <div className="slider-container ">
         <Slider {...settings}>
           {certificates.map((certificate, index) => (
-            <div key={index} className="w-full aspect-[3/2] overflow-hidden mr-4">
+            <div
+              key={index}
+              className="w-full aspect-[3/2] overflow-hidden mr-4 border-2 border-primary"
+            >
               <img
                 src={certificate}
                 className="w-full h-full object-cover object-center"

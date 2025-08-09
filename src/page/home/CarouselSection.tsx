@@ -20,21 +20,27 @@ export const CarouselSection: FC<CarouselSectionProps> = ({ className }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  const images = ["/home/carousel1.jpg",
-    "/home/carousel2.jpg",
-    "/home/carousel3.jpg",
-    "/home/carousel4.jpg",
-    "/home/carousel5.jpg"];
+  const images = [
+    "/home/carousel1.avif",
+    "/home/carousel2.avif",
+    "/home/carousel3.avif",
+    "/home/carousel4.avif",
+    "/home/carousel5.avif",
+  ];
   return (
     <div className={cn(className, "w-full  bg-foreground max-h-[500px]")}>
       <Container>
         <Slider {...settings}>
           {images.map((src) => (
             <div>
-              <img
-                src={src}
-                className="h-[200px] md:h-[500px] object-fill w-full"
-              />
+              <picture>
+                <source srcSet={src} type="image/avif" />
+                <img
+                  className="h-[200px] md:h-[500px] object-fill w-full"
+                  loading="lazy"
+                  src={src}
+                />
+              </picture>
             </div>
           ))}
         </Slider>

@@ -22,7 +22,7 @@ export const TeenCoursePage = () => {
             </h2>
             <Breadcrumb
               child={
-                <Link to={USER_ROUTES.COURSE_YOUNG}>
+                <Link to={USER_ROUTES.COURSE_TEEN}>
                   {programTitles["teens"]}
                 </Link>
               }

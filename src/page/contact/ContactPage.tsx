@@ -29,7 +29,7 @@ export const ContactPage = () => {
     <div>
       <Container>
         <div
-          className="bg-[url('/home/carousel2.jpg')] min-h-[400px] w-full  bg-cover bg-center
+          className="bg-[url('/home/carousel2.avif')] min-h-[400px] w-full  bg-cover bg-center
           flex flex-col justify-end"
         >
           <div className="inline-flex  flex-col">

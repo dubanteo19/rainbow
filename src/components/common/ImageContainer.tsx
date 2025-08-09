@@ -11,13 +11,17 @@ export const ImageContainer: FC<ImageContainerProps> = ({
   className,
   lazy = true,
 }) => {
+  const avifSrc = src.replace(/\.(jpg|jpeg|png)$/i, ".avif");
   return (
     <div className={cn("w-full h-auto overflow-hidden ", className)}>
-      <img
-        className="w-full h-full object-cover"
-        loading={lazy ? "lazy" : "eager"}
-        src={src}
-      />
+      <picture>
+        <source srcSet={avifSrc} type="image/avif" />
+        <img
+          className="w-full h-full object-cover"
+          loading={lazy ? "lazy" : "eager"}
+          src={src}
+        />
+      </picture>
     </div>
   );
 };

@@ -4,43 +4,50 @@ export const feedbacks: Feedback[] = [
   {
     id: "1",
     content:
-      "Cháu đã học ở Rainbow English Center được hơn hai năm. Qua một thời gian thì khả năng tiếng Anh của con lên nhiều, con tự tin hơn, và đạt thành tích cao. Cũng cảm ơn Quý thầy cô Rainbow English Center rất nhiều vì đã tận tình hỗ trợ con.",
-    authorName: "Phụ huynh bé Mai Vũ Anh Thư (Chuyên THPT Lê Quý Đôn)",
+      "Mình là phụ huynh của bé tường Vy cảm thấy chất lượng dạy của trung tâm rất tốt bé nhà mình đi học về ngày nào cũng vui vẻ và đều share với mình rất nhiều bài học hay đã đc hc trên lớp và càng ngày tiến bộ",
+    authorName: "TRƯƠNG THỊ TƯỜNG VY",
     authorImage: "https://i.pravatar.cc/150?img=10",
   },
   {
     id: "2",
     content:
-      "Con mình rất thích đến Rainbow English Center vì các thầy cô nhiệt tình, bài học sinh động. Sau 6 tháng học, con đã có thể giao tiếp cơ bản với người nước ngoài mà không còn sợ nữa.",
-    authorName: "Phụ huynh bé Nguyễn Quốc Hưng (THCS Nguyễn Du)",
+      "Tôi là phụ huynh của bé Eric. Bé học đc 7 năm rồi, từ ngày bé học thì kĩ năng Tiếng Anh của bé cũng đã cải thiện và bé cũng đạt đc giải khuyến khích khi thi Tiếng Anh cấp Tỉnh. Bé cũng nói học ở đây khá vui. Nếu muốn thì mng cho con em học thử",
+    authorName: "NGUYỄN TRẦN THIÊN PHÚ",
     authorImage: "https://i.pravatar.cc/150?img=11",
   },
   {
     id: "3",
     content:
-      "Rainbow English Center là nơi tuyệt vời giúp con tôi cải thiện kỹ năng nghe nói. Cháu từng rất ngại giao tiếp, nhưng giờ đã tự tin tham gia các buổi thuyết trình ở trường.",
-    authorName: "Phụ huynh bé Lê Ngọc Minh Châu (TH Trần Hưng Đạo)",
+      "Em lisa nói với tôi vào lớp học rất vui ,rất thích môi trường học tập ở rainbow và rất thích cô Duyên",
+    authorName: "NGÔ PHƯƠNG VY",
     authorImage: "https://i.pravatar.cc/150?img=12",
   },
   {
     id: "4",
     content:
-      "Cảm ơn Rainbow English Center đã giúp con tôi đạt điểm cao trong kỳ thi Cambridge. Các giáo viên rất tận tâm và luôn đồng hành cùng học viên.",
-    authorName: "Phụ huynh bé Trần Bảo Long (THCS Lý Thường Kiệt)",
+      "Tôi là phụ huynh của bé Naty Giáo viên tại trung tâm dễ thương, rất tận tâm và chuyên môn cao. Mỗi buổi học đều mang lại kiến thức mới mẻ và dễ hiểu. Mình cảm thấy tiến bộ rõ rệt sau một thời gian học tại đây.",
+    authorName: "PHẠM HOÀNG AN NHIÊN",
     authorImage: "https://i.pravatar.cc/150?img=13",
   },
   {
     id: "5",
     content:
-      "Cháu theo học tại Rainbow English Center hơn một năm và tiến bộ rõ rệt. Gia đình rất yên tâm vì môi trường học tập an toàn, thân thiện và chất lượng.",
-    authorName: "Phụ huynh bé Đặng Thảo Nhi (TH Nguyễn Bỉnh Khiêm)",
+      "Phụ huynh bé Kim Anh(Amy) Grade 4. Trung tâm có ko gian hc tập thoải mái,trang thiết bị hiện đại.Điểm con tôi đã có sự cải thiện rất lớn. Con rất hào hứng với các bài học.",
+    authorName: "NGUYỄN NGỌC KIM ANH",
     authorImage: "https://i.pravatar.cc/150?img=14",
   },
   {
     id: "6",
     content:
-      "Sau khi học tại Rainbow English Center, con tôi đã đạt học bổng tiếng Anh tại trường. Chân thành cảm ơn các thầy cô đã truyền cảm hứng và đồng hành cùng con.",
-    authorName: "Phụ huynh bé Hồ Anh Tuấn (THPT Nguyễn Trãi)",
+      "Phụ huynh em lâm Class Ms.Phụng Chương trình học được thiết kế rất khoa học và phù hợp với lứa tuổi của các con. Các chủ đề đa dạng, gần gũi với đời sống, giúp con tôi không chỉ học từ vựng mà còn biết cách áp dụng vào thực tế. ",
+    authorName: "NGUYỄN NGỌC HUYỀN TRÂN",
+    authorImage: "https://i.pravatar.cc/150?img=15",
+  },
+  {
+    id: "7",
+    content:
+      "Trung tâm đã làm rất tốt trong việc tạo ra một môi trường học tập tích cực. Tuy nhiên, tôi mong muốn trung tâm có thể tổ chức thêm nhiều hoạt động ngoại khóa hơn để các con có thêm cơ hội thực hành tiếng Anh một cách tự nhiên. Dù vậy, tôi vẫn rất tin tưởng vào chất lượng giảng dạy tại đây.",
+    authorName: "BÙI THỊ DIỆU HƯƠNG",
     authorImage: "https://i.pravatar.cc/150?img=15",
   },
 ];
