@@ -1,4 +1,3 @@
-import { ImageContainer } from "@/components/common/ImageContainer";
 import { Container } from "@/components/ui/container";
 import { feedbacks } from "@/data/feedbacks";
 import type { Feedback } from "@/type/feedback";
