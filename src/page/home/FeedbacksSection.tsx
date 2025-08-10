@@ -14,10 +14,9 @@ const FeedbackItem: FC<Feedback> = ({ content, authorImage, authorName }) => {
         <p className="text-sm text-gray-500 italic ">{content}</p>
       </div>
       <div className="flex  gap-2 md:gap-6 items-center ">
-        <ImageContainer
-          src={authorImage}
-          className="w-15 md:w-20 rounded-full "
-        />
+        <div className="w-15 h-auto aspect-square md:w-20  rounded-full overflow-hidden">
+          <img className="w-full h-full object-fill" src={authorImage} />
+        </div>
         <div>
           <p className="uppercase text-sm text-gray-500">{authorName}</p>
           <p className="text-xs text-gray-500 mt-2">Parents</p>
