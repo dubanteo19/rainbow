@@ -1,7 +1,7 @@
 import Slider, { type Settings } from "react-slick";
 
 export const CertificatesSection = () => {
-  const certificates = Array.from({ length: 20 }, (_, i)=>`/certifications/pic${i+1}.avif`);
+  const certificates = Array.from({ length: 17 }, (_, i)=>`/certifications/pic${i+1}.avif`);
   const settings: Settings = {
     infinite: true,
     speed: 1000,
