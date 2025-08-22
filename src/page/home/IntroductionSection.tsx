@@ -7,7 +7,7 @@ export const IntroductionSection = () => {
       <div className="flex justify-between  items-end ">
         <div>
           <h2 className="text-xl md:text-2xl">
-            Welcome to RAINBOW ENGLISH CENTER
+            Welcome to RAINBOW ENGLISH CENTRE
           </h2>
           <h3 className="text-sm text-gray-500">Trung tâm Ngoại ngữ Rainbow</h3>
         </div>

@@ -28,7 +28,7 @@ export const AboutPage = () => {
         <div className="py-5">
           <div className="flex justify-between  items-end ">
             <div>
-              <h2 className="text-xl md:text-2xl">RAINBOW ENGLISH CENTER</h2>
+              <h2 className="text-xl md:text-2xl">RAINBOW ENGLISH CENTRE</h2>
               <h3 className="text-sm text-gray-500">
                 Trung tâm Ngoại ngữ Rainbow
               </h3>

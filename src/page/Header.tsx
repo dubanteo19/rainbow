@@ -43,7 +43,7 @@ const ContactBar = () => {
       </div>
       <div className="inline-flex font-bold text-gray-700 items-center gap-2">
         <Facebook className="text-primary" />
-        <span>Rainbow English Center </span>
+        <span>Rainbow English Centre </span>
       </div>
     </div>
   );
